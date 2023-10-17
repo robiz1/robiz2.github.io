@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Kirim Email</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 15px;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+        }
+
+        input {
+            margin: 5px 0px;
+            height: 35px;
+            padding: 7px;
+        }
+
+        button {
+            height: 35px;
+            margin: 5px 0px;
+            background-color: #451952;
+            border: none;
+            border-radius: 5px;
+            color: #662549;
+        }
+
+        button:hover {
+            background: #AE445A;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="proses_form.php" method="post">
+        <label for="to">Tujuan:</label>
+        <input type="email" name="to" id="to" required><br>
+
+        <label for="subject">Subjek:</label>
+        <input type="text" name="subject" id="subject" required><br>
+
+        <label for="message">Pesan:</label>
+        <textarea name="message" id="message" rows="4" required></textarea><br>
+
+        <input type="submit" value="Kirim Email">
+    </form>
+</body>
+</html>
